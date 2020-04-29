@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.PoslovniKorisniciAddController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="244.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naziv:" wrappingWidth="39.13671875" />
+            <TextField fx:id="unosNazivId" layoutX="281.0" layoutY="96.0" />
+            <Button fx:id="okButton" layoutX="300.0" layoutY="331.0" mnemonicParsing="false" onAction="#stisnutGumb" text="OK" />
+            <Text layoutX="247.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Web:" wrappingWidth="33.099609375" />
+            <Text layoutX="238.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail:" />
+            <Text layoutX="256.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unos poslovnog korisnika" wrappingWidth="154.13671875" />
+            <TextField fx:id="unosWebId" layoutX="281.0" layoutY="137.0" />
+            <TextField fx:id="unosMailId" layoutX="281.0" layoutY="178.0" />
+            <Text layoutX="235.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefon:" />
+            <TextField fx:id="unosTelefonId" layoutX="281.0" layoutY="219.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox prefHeight="26.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Artikli">
+                     <items>
+                        <Menu mnemonicParsing="false" text="Automobili">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguAutomobila" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziAutomobiliAdd" text="Dodaj" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Stanovi">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguStanova" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziStanoviAdd" text="Dodaj" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Usluge">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguUsluga" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziUslugeAdd" text="Dodaj" />
+                           </items>
+                        </Menu>
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Korisnici">
+                  <items>
+                        <Menu mnemonicParsing="false" text="Privatni Korisnici">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#prikaziPrivatniKorisnik" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziPrivatniKorisniciAdd" text="Dodaj" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Poslovni Korisnici">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziPoslovnogKorisnik" text="Pretraga" />
+                           </items>
+                        </Menu>
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

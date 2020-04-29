@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.UslugeController">
+   <top>
+      <VBox prefHeight="26.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Artkli">
+                  <items>
+                        <Menu mnemonicParsing="false" text="Automobili">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguAutomobila" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziAutomobiliAdd" text="Dodaj" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Stanovi">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguStanova" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziStanoviAdd" text="Dodaj" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Usluge">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziUslugeAdd" text="Dodaj" />
+                           </items>
+                        </Menu>
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Korisnici">
+                     <items>
+                        <Menu mnemonicParsing="false" text="Privatni Korisnici">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#prikaziPrivatniKorisnik" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziPrivatniKorisniciAdd" text="Dodaj" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Poslovni Korisnici">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#prikaziPoslovnogKorisnik" text="Pretraga" />
+                              <MenuItem mnemonicParsing="false" onAction="#prikaziPoslovniKorisniciAdd" text="Dodaj" />
+                          </items>
+                        </Menu>
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <TableView fx:id="tablicaUsluga" prefHeight="127.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="kolonaTabliceZaIme" prefWidth="75.0" text="Ime" />
+            <TableColumn fx:id="kolonaTabliceZaOpis" prefWidth="75.0" text="Opis" />
+            <TableColumn fx:id="kolonaTabliceZaCijenu" prefWidth="75.0" text="Cijena" />
+            <TableColumn fx:id="kolonaTabliceZaStanje" prefWidth="74.0" text="Stanje" />
+         </columns></TableView>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="248.0" prefWidth="641.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="naslovId" layoutX="275.0" layoutY="64.0" />
+            <Text layoutX="238.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pretrazivanje usluga" wrappingWidth="146.84375" />
+            <Text layoutX="226.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naslov:" wrappingWidth="63.13671875" />
+            <Text layoutX="231.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opis:" wrappingWidth="63.13671875" />
+            <Text layoutX="226.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijena:" wrappingWidth="63.13671875" />
+            <TextField fx:id="opisId" layoutX="275.0" layoutY="100.0" />
+            <TextField fx:id="cijenaId" layoutX="275.0" layoutY="135.0" />
+            <Button layoutX="275.0" layoutY="209.0" mnemonicParsing="false" onAction="#stisnutGumb" text="Pretrazi" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

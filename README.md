@@ -5,4 +5,5 @@ Also allows to search through already existing ads.
 ![Interface](https://i.imgur.com/gvmQDkw.png)
 ![Searching](https://i.imgur.com/YEipfg6.png)
 ![Adding a vehicle](https://i.imgur.com/i9zPg7a.png)
+![Confirmation](https://i.imgur.com/wEzGkG0.png)
 ![All menus are accessible from everywhere](https://i.imgur.com/ZyAOecF.png)
